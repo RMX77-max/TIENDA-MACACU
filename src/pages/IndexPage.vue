@@ -24,7 +24,7 @@
               <q-carousel-slide name="style" class="column no-wrap flex-center">
                 <div class="q-mt-md text-center">
                   <img
-                    src="/src/img/puertaTienda.jpeg"
+                    src="/img/puertaTienda.jpeg"
                     style="width: 100%; border-radius: 12px"
                   />
                 </div>
@@ -32,7 +32,7 @@
               <q-carousel-slide name="tv" class="column no-wrap flex-center">
                 <div class="q-mt-md text-center">
                   <img
-                    src="/src/img/InteriorTienda.jpeg"
+                    src="/img/InteriorTienda.jpeg"
                     style="width: 100%; border-radius: 12px"
                   />
                 </div>
@@ -43,7 +43,7 @@
               >
                 <div class="q-mt-md text-center">
                   <img
-                    src="/src/img/Tienda.jpeg"
+                    src="/img/Tienda.jpeg"
                     style="width: 100%; border-radius: 12px"
                   />
                 </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="q-mt-md">
           <img
-            src="/src/img/Licoreria.png"
+            src="/img/Licoreria.png"
             alt="Mapa da loja"
             style="width: 100%; border-radius: 12px"
           />

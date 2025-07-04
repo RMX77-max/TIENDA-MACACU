@@ -1,8 +1,5 @@
 <template>
-  <q-layout
-    view="lHh Lpr lFf"
-    style="background-image: url('/src/img/mafia1.jpg')"
-  >
+  <q-layout view="lHh Lpr lFf" style="background-image: url('/img/mafia1.jpg')">
     <!-- BARRA SUPERIOR -->
     <q-header elevated class="bg-transparent text-white">
       <q-toolbar
@@ -115,7 +112,7 @@
         <!-- Logo centro -->
         <div class="col-4 row justify-center">
           <img
-            src="/src/img/logo_macacu.jpeg"
+            src="/img/logo_macacu.jpeg"
             alt="Logo"
             class="logo-flotante"
             style="height: 100px; width: 100px"
@@ -144,7 +141,7 @@
     <q-drawer v-model="leftDrawerOpen" :show-if-above="false" bordered>
       <div style="padding: 20px">
         <img
-          src="/src/img/logo_macacu.jpeg"
+          src="/img/logo_macacu.jpeg"
           alt=""
           style="width: 250px; height: 250px; border-radius: 50%"
         />

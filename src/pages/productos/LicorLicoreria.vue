@@ -2,7 +2,7 @@
   <q-page class="q-pa-md bg-black">
     <!-- Banner superior -->
     <q-responsive :ratio="16 / 9" class="q-mb-md" style="max-height: 400px">
-      <q-img src="/src/img/mafia3.jpg" />
+      <q-img src="/img/mafia3.jpg" />
     </q-responsive>
 
     <!-- Seção:LICOR 🍸 -->
@@ -13,7 +13,7 @@
       <div v-for="(item, index) in licor" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 200px; width: 100px; display: block; margin: 0 auto"
           />
           <q-card-section class="text-center">
@@ -28,7 +28,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="
                   height: 200px;
                   width: 150px;
@@ -96,7 +96,7 @@ const licor = ref([
   {
     name: "Ballena 750",
     price: "R$149,99",
-    image: "/src/img/ballena.jpeg",
+    image: "/img/ballena.jpeg",
     description: "Intenso, exótico e marcante.",
     modal: false,
     quantity: 1,
@@ -104,7 +104,7 @@ const licor = ref([
   {
     name: "Licor Iara 750",
     price: "R$89,99",
-    image: "/src/img/lara.jpg",
+    image: "/img/lara.jpg",
     description: "Sabor nacional com personalidade.",
     modal: false,
     quantity: 1,
@@ -112,7 +112,7 @@ const licor = ref([
   {
     name: "Licor 43 700ml",
     price: "R$169,99",
-    image: "/src/img/43.jpeg",
+    image: "/img/43.jpeg",
     description: "Espanhol, doce e sofisticado.",
     modal: false,
     quantity: 1,

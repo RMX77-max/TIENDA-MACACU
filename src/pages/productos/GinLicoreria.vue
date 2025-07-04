@@ -2,7 +2,7 @@
   <q-page class="q-pa-md bg-black">
     <!-- Banner superior -->
     <q-responsive :ratio="16 / 9" class="q-mb-md" style="max-height: 400px">
-      <q-img src="/src/img/mafia5.jpg" />
+      <q-img src="/img/mafia5.jpg" />
     </q-responsive>
 
     <!-- Seção: Copos com Red Bull -->
@@ -13,7 +13,7 @@
       <div v-for="(item, index) in redBullCups" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 250px"
           />
           <q-card-section class="text-center">
@@ -28,7 +28,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="height: 250px"
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
@@ -86,7 +86,7 @@
       <div v-for="(item, index) in vibesCups" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 250px"
           />
           <q-card-section class="text-center">
@@ -101,7 +101,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="height: 250px"
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
@@ -159,7 +159,7 @@
       <div v-for="(item, index) in combos_con_redbull" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 250px"
           />
           <q-card-section class="text-center">
@@ -174,7 +174,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="height: 250px"
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
@@ -232,7 +232,7 @@
       <div v-for="(item, index) in combo_vibe" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 200px; width: 150px; display: block; margin: 0 auto"
           />
           <q-card-section class="text-center">
@@ -247,7 +247,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="
                   height: 200px;
                   width: 150px;
@@ -317,7 +317,7 @@ const redBullCups = ref([
   {
     name: "Doses de Red Bull com Rocks de melancia",
     price: "R$26,00",
-    image: "/src/img/vasoconredbull.jpg",
+    image: "/img/vasoconredbull.jpg",
     description: "Refrescância da melancia com energia pura.",
     modal: false,
     quantity: 1,
@@ -325,7 +325,7 @@ const redBullCups = ref([
   {
     name: "Doses de Red Bull com Rocks",
     price: "R$25,00",
-    image: "/src/img/vasoconredbull.jpg",
+    image: "/img/vasoconredbull.jpg",
     description: "Clássico e direto, um gin intenso com Red Bull.",
     modal: false,
     quantity: 1,
@@ -333,7 +333,7 @@ const redBullCups = ref([
   {
     name: "Doses de Red Bull com Eternity",
     price: "R$20,00",
-    image: "/src/img/vasoconredbull.jpg",
+    image: "/img/vasoconredbull.jpg",
     description: "Floral e energético, para os mais ousados.",
     modal: false,
     quantity: 1,
@@ -341,7 +341,7 @@ const redBullCups = ref([
   {
     name: "Doses de Red Bull com RM's",
     price: "R$19,00",
-    image: "/src/img/vasoconredbull.jpg",
+    image: "/img/vasoconredbull.jpg",
     description: "Variado, colorido e com energia para a noite inteira.",
     modal: false,
     quantity: 1,
@@ -349,7 +349,7 @@ const redBullCups = ref([
   {
     name: "Doses de Red Bull com Tanquery",
     price: "R$50,00",
-    image: "/src/img/vasoconredbull.jpg",
+    image: "/img/vasoconredbull.jpg",
     description: "Tradicional com um toque moderno energético.",
     modal: false,
     quantity: 1,
@@ -361,7 +361,7 @@ const vibesCups = ref([
   {
     name: "Doses de vibe com Rocks",
     price: "R$20,00",
-    image: "/src/img/vasovibe.png",
+    image: "/img/vasovibe.png",
     description: "Simples e saboroso com o toque leve do Vibes.",
     modal: false,
     quantity: 1,
@@ -369,7 +369,7 @@ const vibesCups = ref([
   {
     name: "Doses de vibe com Eternity",
     price: "R$15,00",
-    image: "/src/img/vasovibe.png",
+    image: "/img/vasovibe.png",
     description: "Suavidade floral com frescor do Vibes.",
     modal: false,
     quantity: 1,
@@ -377,7 +377,7 @@ const vibesCups = ref([
   {
     name: "Doses de vibe com RM's",
     price: "R$10,00",
-    image: "/src/img/vasovibe.png",
+    image: "/img/vasovibe.png",
     description: "Um mix divertido e tropical.",
     modal: false,
     quantity: 1,
@@ -385,7 +385,7 @@ const vibesCups = ref([
   {
     name: "Doses de vibe com Tanquery",
     price: "R$38,00",
-    image: "/src/img/vasovibe.png",
+    image: "/img/vasovibe.png",
     description: "Elegância em forma de drink refrescante.",
     modal: false,
     quantity: 1,
@@ -396,7 +396,7 @@ const combo_vibe = ref([
   {
     name: "Combo Eternity com Vibe",
     price: "R$55,00",
-    image: "/src/img/vibe-eternity.png",
+    image: "/img/vibe-eternity.png",
     description: "Um combo delicado e tropical.",
     modal: false,
     quantity: 1,
@@ -404,7 +404,7 @@ const combo_vibe = ref([
   {
     name: "Combo Tanquery com Vibe",
     price: "R$155,00",
-    image: "/src/img/vibe_tanqueria.jpg",
+    image: "/img/vibe_tanqueria.jpg",
     description: "Para quem exige sofisticação e frescor.",
     modal: false,
     quantity: 1,
@@ -415,7 +415,7 @@ const combos_con_redbull = ref([
   {
     name: "Combo Tanquery com Red Bull",
     price: "R$250,00",
-    image: "/src/img/tanquery-redbull.png",
+    image: "/img/tanquery-redbull.png",
     description: "Premium, com a dose certa de energia.",
     modal: false,
     quantity: 1,
@@ -423,7 +423,7 @@ const combos_con_redbull = ref([
   {
     name: "Combo Eternity com Red Bull",
     price: "R$85,00",
-    image: "/src/img/eternity_redbull.jpg",
+    image: "/img/eternity_redbull.jpg",
     description: "Elegante e vibrante, ideal para noites longas.",
     modal: false,
     quantity: 1,

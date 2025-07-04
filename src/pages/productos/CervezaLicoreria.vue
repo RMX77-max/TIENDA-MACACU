@@ -2,7 +2,7 @@
   <q-page class="q-pa-md bg-black">
     <!-- Banner superior -->
     <q-responsive :ratio="16 / 9" class="q-mb-md" style="max-height: 400px">
-      <q-img src="/src/img/mafia3.jpg" />
+      <q-img src="/img/mafia3.jpg" />
     </q-responsive>
 
     <!-- Seção: CERVEJAS 🍻 -->
@@ -13,7 +13,7 @@
       <div v-for="(item, index) in cerveja" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 200px; width: 100px; display: block; margin: 0 auto"
           />
           <q-card-section class="text-center">
@@ -28,7 +28,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="
                   height: 200px;
                   width: 100px;
@@ -91,7 +91,7 @@
       <div v-for="(item, index) in cerveja_longneck" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/product_placeholder.jpg'"
             style="height: 200px; width: 100px; display: block; margin: 0 auto"
           />
           <q-card-section class="text-center">
@@ -106,7 +106,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="
                   height: 200px;
                   width: 100px;
@@ -176,7 +176,7 @@ const cerveja = ref([
   {
     name: "Heineken 269ml",
     price: "R$8,00",
-    image: "/src/img/heineken.jpeg",
+    image: "/img/heineken.jpeg",
     description: "Puro malte e frescor.",
     modal: false,
     quantity: 1,
@@ -184,7 +184,7 @@ const cerveja = ref([
   {
     name: "Budweiser 269mls",
     price: "R$7,00",
-    image: "/src/img/budweiser.jpeg",
+    image: "/img/budweiser.jpeg",
     description: "Sabor equilibrado e bem gelada.",
     modal: false,
     quantity: 1,
@@ -192,7 +192,7 @@ const cerveja = ref([
   {
     name: "Eisenbanh 269ml",
     price: "R$7,00",
-    image: "/src/img/eisenban.jpg",
+    image: "/img/eisenban.jpg",
     description: "Artesanal, perfeita para relaxar.",
     modal: false,
     quantity: 1,
@@ -200,7 +200,7 @@ const cerveja = ref([
   {
     name: "Eisenbanh 350ml",
     price: "R$9,00",
-    image: "/src/img/eisenban350.jpg",
+    image: "/img/eisenban350.jpg",
     description: "Artesanal, perfeita para relaxar.",
     modal: false,
     quantity: 1,
@@ -208,7 +208,7 @@ const cerveja = ref([
   {
     name: "Amstel 269ml",
     price: "R$7,00",
-    image: "/src/img/amstel.png",
+    image: "/img/amstel.png",
     description: "Suave e fácil de beber.",
     modal: false,
     quantity: 1,
@@ -216,7 +216,7 @@ const cerveja = ref([
   {
     name: "Itaipava 350ml",
     price: "R$6,00",
-    image: "/src/img/itaipava.jpeg",
+    image: "/img/itaipava.jpeg",
     description: "Econômica e tradicional.",
     modal: false,
     quantity: 1,
@@ -224,7 +224,7 @@ const cerveja = ref([
   {
     name: "Cerveja império 269ml",
     price: "R$7,00",
-    image: "/src/img/imperio2.jpg",
+    image: "/img/imperio2.jpg",
     description: "Pilsen forte com ótimo custo-benefício.",
     modal: false,
     quantity: 1,
@@ -236,7 +236,7 @@ const cerveja_longneck = ref([
   {
     name: "Heineken 330ml",
     price: "R$12,00",
-    image: "/src/img/heineken-botella.jpg",
+    image: "/img/heineken-botella.jpg",
     description: "Clássica e sempre presente.",
     modal: false,
     quantity: 1,
@@ -244,7 +244,7 @@ const cerveja_longneck = ref([
   {
     name: "Corona  330ml",
     price: "R$14,00",
-    image: "/src/img/corona.jpg",
+    image: "/img/corona.jpg",
     description: "Mexicana refrescante e leve.",
     modal: false,
     quantity: 1,
@@ -252,7 +252,7 @@ const cerveja_longneck = ref([
   {
     name: "Coronita 210ml",
     price: "R$10,00",
-    image: "/src/img/coronita.jpg",
+    image: "/img/coronita.jpg",
     description: "Mexicana refrescante e leve.",
     modal: false,
     quantity: 1,
@@ -260,7 +260,7 @@ const cerveja_longneck = ref([
   {
     name: "Stella 330ml",
     price: "R$10,00",
-    image: "/src/img/estela.jpeg",
+    image: "/img/estela.jpeg",
     description: "Belga, refinada e suave.",
     modal: false,
     quantity: 1,

@@ -2,7 +2,7 @@
   <q-page class="q-pa-md bg-black">
     <!-- Banner superior -->
     <q-responsive :ratio="16 / 9" class="q-mb-md" style="max-height: 400px">
-      <q-img src="/src/img/fumando.jpg" />
+      <q-img src="/img/fumando.jpg" />
     </q-responsive>
 
     <!-- Seção:LICOR 🍸 -->
@@ -13,7 +13,7 @@
       <div v-for="(item, index) in seda" :key="index">
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
-            :src="item.image || '/src/img/product_placeholder.jpg'"
+            :src="item.image || '/img/product_placeholder.jpg'"
             style="height: 200px"
           />
           <q-card-section class="text-center">
@@ -28,7 +28,7 @@
           <q-card style="min-width: 400px">
             <q-card-section>
               <q-img
-                :src="item.image || '/src/img/product_placeholder.jpg'"
+                :src="item.image || '/img/product_placeholder.jpg'"
                 style="height: 200px"
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
@@ -93,7 +93,7 @@ const seda = ref([
   {
     name: "Seda Papelito",
     price: "R$7,00",
-    image: "/src/img/papelito.jpg",
+    image: "/img/papelito.jpg",
     description: "Tradicional, ideal para o dia a dia.",
     modal: false,
     quantity: 1,
@@ -101,7 +101,7 @@ const seda = ref([
   {
     name: "Seda Zomo alfafa",
     price: "R$7,00",
-    image: "/src/img/zomo.png",
+    image: "/img/zomo.png",
     description: "Natural e resistente.",
     modal: false,
     quantity: 1,
@@ -109,7 +109,7 @@ const seda = ref([
   {
     name: "Seda zomo natural",
     price: "R$5,00",
-    image: "/src/img/natural.png",
+    image: "/img/natural.png",
     description: "Papel ecológico e suave.",
     modal: false,
     quantity: 1,
@@ -117,7 +117,7 @@ const seda = ref([
   {
     name: "Seda Dólar solta",
     price: "R$1,00",
-    image: "/src/img/dolar.jpg",
+    image: "/img/dolar.jpg",
     description: "Econômica e prática.",
     modal: false,
     quantity: 1,
@@ -125,7 +125,7 @@ const seda = ref([
   {
     name: "Seda lion rolling circus",
     price: "R$5,00",
-    image: "/src/img/circus.jpg",
+    image: "/img/circus.jpg",
     description: "Alternativa estilosa e moderna.",
     modal: false,
     quantity: 1,
@@ -133,7 +133,7 @@ const seda = ref([
   {
     name: "Seda fresa cereja",
     price: "R$5,00",
-    image: "/src/img/dolar.jpg",
+    image: "/img/dolar.jpg",
     description: "Saborizada para uma experiência diferente.",
     modal: false,
     quantity: 1,
@@ -141,7 +141,7 @@ const seda = ref([
   {
     name: "Seda Dólar já bolada",
     price: "R$1,50",
-    image: "/src/img/dolar.jpg",
+    image: "/img/dolar.jpg",
     description: "Simples e pronta para usar.",
     modal: false,
     quantity: 1,
