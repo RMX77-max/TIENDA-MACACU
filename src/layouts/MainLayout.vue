@@ -1,44 +1,225 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+  <q-layout
+    view="lHh Lpr lFf"
+    style="background-image: url('/src/img/mafia1.jpg')"
+  >
+    <!-- BARRA SUPERIOR -->
+    <q-header elevated class="bg-transparent text-white">
+      <q-toolbar
+        class="row items-center justify-around full-width q-py-sm"
+        style="background-color: black; height: 150px"
+      >
+        <!-- Botones izquierda - solo desktop -->
+        <div
+          class="col-4 row items-center q-gutter-sm justify-center"
+          v-if="$q.screen.gt.sm"
+        >
+          <q-btn
+            flat
+            label="COMEÇAR"
+            @click="$router.push('/InicioLicoreria')"
+            style="font-size: 20px"
+          />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+          <!-- Botón Produtos con menú desplegable que no se cierra al salir -->
+          <div style="position: relative">
+            <!-- Área que activa el menú al pasar el mouse -->
+            <div
+              @mouseenter="menuProdutos = true"
+              @mouseleave="menuProdutos = false"
+            >
+              <q-btn
+                flat
+                label="PRODUTOS"
+                style="font-size: 20px"
+                no-caps
+                class="text-white"
+              />
+            </div>
 
-        <div>Quasar v{{ $q.version }}</div>
+            <!-- Menú desplegable -->
+            <q-menu
+              v-model="menuProdutos"
+              anchor="bottom middle"
+              self="top middle"
+              transition-show="jump-down"
+              transition-hide="jump-up"
+              :offset="[0, 5]"
+              persistent
+            >
+              <!-- Detectar si el mouse entra o sale del menú también -->
+              <div
+                @mouseenter="menuProdutos = true"
+                @mouseleave="menuProdutos = false"
+              >
+                <q-list style="min-width: 180px">
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/Whisky')"
+                  >
+                    <q-item-section>Whisky</q-item-section>
+                  </q-item>
+                  <q-item clickable v-close-popup @click="$router.push('/gin')">
+                    <q-item-section>Gin</q-item-section>
+                  </q-item>
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/cervejas')"
+                  >
+                    <q-item-section>Cervejas</q-item-section>
+                  </q-item>
+
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/licor')"
+                  >
+                    <q-item-section>Licor</q-item-section>
+                  </q-item>
+
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/seda')"
+                  >
+                    <q-item-section>Sedas</q-item-section>
+                  </q-item>
+
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/produtos/outros')"
+                  >
+                    <q-item-section>Outros</q-item-section>
+                  </q-item>
+                </q-list>
+              </div>
+            </q-menu>
+          </div>
+        </div>
+
+        <!-- Menú hamburguesa - solo móvil -->
+        <div class="col-4 row items-center justify-start" v-else>
+          <q-btn
+            flat
+            dense
+            round
+            icon="menu"
+            aria-label="Menu"
+            @click="toggleLeftDrawer"
+          />
+        </div>
+
+        <!-- Logo centro -->
+        <div class="col-4 row justify-center">
+          <img
+            src="/src/img/logo_macacu.jpeg"
+            alt="Logo"
+            class="logo-flotante"
+            style="height: 100px; width: 100px"
+          />
+        </div>
+
+        <!-- Icono carrito - solo desktop -->
+        <div
+          class="col-4 row items-center justify-evenly q-gutter-sm"
+          v-if="$q.screen.gt.sm"
+        >
+          <q-btn
+            flat
+            icon="shopping_cart"
+            @click="$router.push('/carrito')"
+            style="font-size: 24px"
+          />
+        </div>
+
+        <!-- Placeholder derecha en móvil -->
+        <div class="col-4" v-else />
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
+    <!-- MENÚ LATERAL (móvil) -->
+    <q-drawer v-model="leftDrawerOpen" :show-if-above="false" bordered>
+      <div style="padding: 20px">
+        <img
+          src="/src/img/logo_macacu.jpeg"
+          alt=""
+          style="width: 250px; height: 250px; border-radius: 50%"
         />
-      </q-list>
-    </q-drawer>
+      </div>
 
+      <!-- Começar -->
+      <router-link
+        to="/InicioLicoreria"
+        exact-active-class="q-item-active-selected"
+        class="q-item q-item-type row no-wrap custom-link"
+        style="text-decoration: none"
+      >
+        <q-item-section class="menu-item">
+          <div class="flex-row" style="display: flex; align-items: center">
+            <q-icon name="home" size="md" color="black" />
+            <span
+              style="
+                margin-left: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+              "
+              >COMEÇAR</span
+            >
+          </div>
+        </q-item-section>
+      </router-link>
+
+      <!-- Produtos com submenu (móvil) -->
+      <q-expansion-item
+        expand-separator
+        icon="list"
+        label="PRODUTOS"
+        class="text-black"
+        style="font-family: Arial, Helvetica, sans-serif"
+      >
+        <q-item clickable v-ripple @click="$router.push('Whisky')">
+          <q-item-section>Whisky</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('gin')">
+          <q-item-section>Gin</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('cervejas')">
+          <q-item-section>Cerveja</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('licor')">
+          <q-item-section>Licor</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('seda')">
+          <q-item-section>Sedas</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('/produtos/outros')">
+          <q-item-section>Outros</q-item-section>
+        </q-item>
+      </q-expansion-item>
+
+      <!-- Carrinho -->
+      <router-link
+        to="/carrito"
+        exact-active-class="q-item-active-selected"
+        class="q-item q-item-type row no-wrap custom-link"
+        style="text-decoration: none"
+      >
+        <q-item-section class="menu-item">
+          <div class="flex-row" style="display: flex; align-items: center">
+            <q-icon name="shopping_cart" size="md" color="black" />
+            <span
+              style="
+                margin-left: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+              "
+              >CARRINHO</span
+            >
+          </div>
+        </q-item-section>
+      </router-link>
+    </q-drawer>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -46,61 +227,28 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { ref } from "vue";
+import { useQuasar } from "quasar";
 
-defineOptions({
-  name: 'MainLayout'
-})
+defineOptions({ name: "MainLayout" });
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+const leftDrawerOpen = ref(false);
+const menuProdutos = ref(false);
+const $q = useQuasar();
 
-const leftDrawerOpen = ref(false)
-
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+<style scoped>
+.logo-flotante {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(10px);
+  z-index: 10;
+}
+</style>
