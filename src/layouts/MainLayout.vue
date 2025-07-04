@@ -191,9 +191,6 @@
         <q-item clickable v-ripple @click="$router.push('seda')">
           <q-item-section>Sedas</q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('/produtos/outros')">
-          <q-item-section>Outros</q-item-section>
-        </q-item>
       </q-expansion-item>
 
       <!-- Carrinho -->
