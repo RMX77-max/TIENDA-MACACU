@@ -133,7 +133,7 @@ const enviarPedidoPorWhatsapp = () => {
 
   mensagem += `\n📦 *Total:* R$ ${cart.totalPrice}`;
 
-  const numeroWhatsapp = "59167740809"; // Coloque aqui seu número com DDI e DDD (ex: 55 = Brasil, 11 = SP)
+  const numeroWhatsapp = "5511967411626"; // Coloque aqui seu número com DDI e DDD (ex: 55 = Brasil, 11 = SP)
   const textoCodificado = encodeURIComponent(mensagem);
   const link = `https://wa.me/${numeroWhatsapp}?text=${textoCodificado}`;
 

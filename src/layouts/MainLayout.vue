@@ -87,9 +87,9 @@
                   <q-item
                     clickable
                     v-close-popup
-                    @click="$router.push('/produtos/outros')"
+                    @click="$router.push('/batido')"
                   >
-                    <q-item-section>Outros</q-item-section>
+                    <q-item-section>smoothies e Gelo</q-item-section>
                   </q-item>
                 </q-list>
               </div>
@@ -119,21 +119,31 @@
           />
         </div>
 
-        <!-- Icono carrito - solo desktop -->
-        <div
-          class="col-4 row items-center justify-evenly q-gutter-sm"
-          v-if="$q.screen.gt.sm"
-        >
+        <!-- Carrito (ambos: desktop y móvil) -->
+        <div class="col-4 row items-center justify-end q-gutter-sm">
           <q-btn
             flat
+            round
             icon="shopping_cart"
             @click="$router.push('/carrito')"
-            style="font-size: 24px"
-          />
+            style="font-size: 20px; position: relative"
+          >
+            <!-- Badge se muestra si hay productos -->
+            <q-badge
+              v-if="cart.totalQuantity > 0"
+              floating
+              color="red"
+              text-color="white"
+              rounded
+              transparent
+              style="top: 0; right: 0"
+            >
+              {{ cart.totalQuantity }}
+            </q-badge>
+          </q-btn>
         </div>
 
         <!-- Placeholder derecha en móvil -->
-        <div class="col-4" v-else />
       </q-toolbar>
     </q-header>
 
@@ -191,6 +201,9 @@
         <q-item clickable v-ripple @click="$router.push('seda')">
           <q-item-section>Sedas</q-item-section>
         </q-item>
+        <q-item clickable v-ripple @click="$router.push('batido')">
+          <q-item-section>smoothies e Gelo</q-item-section>
+        </q-item>
       </q-expansion-item>
 
       <!-- Carrinho -->
@@ -223,7 +236,9 @@
 <script setup>
 import { ref } from "vue";
 import { useQuasar } from "quasar";
+import { useCartStore } from "src/stores/cart";
 
+const cart = useCartStore();
 defineOptions({ name: "MainLayout" });
 
 const leftDrawerOpen = ref(false);
