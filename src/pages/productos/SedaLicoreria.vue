@@ -25,11 +25,16 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
-                style="height: 200px"
+                style="
+                  height: 200px;
+                  width: 150px;
+                  display: block;
+                  margin: 0 auto;
+                "
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
               <div class="text-subtitle1 text-grey-7">Descrição:</div>

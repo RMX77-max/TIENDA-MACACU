@@ -25,7 +25,7 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
@@ -97,7 +97,7 @@ const cart = useCartStore();
 const gelo = ref([
   {
     name: "1 pacote de gelo de coco ",
-    price: "R$25,00",
+    price: "R$4,00",
     image: "/img/coco.png",
     description:
       "Refrescante e suave, esse gelo traz o sabor tropical do coco para dar um toque especial a qualquer bebida. Ideal para drinks com whisky, rum ou batidas cremosas.",
@@ -106,7 +106,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de maracujá",
-    price: "R$25,00",
+    price: "R$4,00",
     image: "/img/maracuya.jpeg",
     description:
       "Levemente ácido e exótico, o gelo de maracujá transforma seu drink com um toque frutado e marcante. Perfeito para equilibrar sabores doces e intensos.",
@@ -115,7 +115,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de melancia",
-    price: "R$25,00",
+    price: "R$4,00",
     image: "/img/sandia.png",
     description:
       "Doce, refrescante e vibrante, esse gelo é a cara do verão! Combina muito bem com bebidas claras e cítricas, deixando tudo mais leve e gostoso.",
@@ -124,7 +124,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de frusta tropicais",
-    price: "R$25,00",
+    price: "R$4,00",
     image: "/img/frutas.png",
     description:
       "Uma mistura tropical irresistível! Esse gelo traz um blend de sabores como abacaxi, manga e maracujá, ideal para drinks energéticos e criativos.",
@@ -133,7 +133,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de frutas vermelhas",
-    price: "R$25,00",
+    price: "R$4,00",
     image: "/img/frutosrojos.jpeg",
     description:
       "Rico e adocicado, com notas de morango, framboesa e amora. Um toque sofisticado que transforma seu copo em uma explosão de sabor.",

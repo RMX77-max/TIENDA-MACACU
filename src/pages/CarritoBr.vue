@@ -23,9 +23,15 @@
           />
 
           <!-- Info del producto -->
-          <div class="column" style="flex: 1; min-width: 0">
-            <div class="text-h6 text-black ellipsis">{{ item.name }}</div>
-            <div class="text-h6 text-deep-orange-5">
+          <!-- Info del producto -->
+          <div class="column justify-between" style="flex: 1; min-width: 0">
+            <div
+              class="text-subtitle2 text-black"
+              style="word-break: break-word; white-space: normal"
+            >
+              {{ item.name }}
+            </div>
+            <div class="text-caption text-deep-orange-5">
               R$
               {{
                 (

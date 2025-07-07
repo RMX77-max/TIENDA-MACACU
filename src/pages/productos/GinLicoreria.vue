@@ -5,6 +5,112 @@
       <q-img src="/img/mafia5.jpg" />
     </q-responsive>
 
+    <!-- Seção: BEBIDAS ESPECIALES -->
+    <div class="text-h5 text-center q-my-md text-weight-bold text-white">
+      DRINKS ESPECIAIS
+    </div>
+    <div class="q-gutter-md row items-stretch justify-center">
+      <div v-for="(item, index) in especial" :key="index">
+        <q-card class="my-card" style="width: 300px" @click="item.modal = true">
+          <q-img
+            :src="item.image || '/img/product_placeholder.jpg'"
+            style="height: 250px"
+          />
+          <q-card-section class="text-center">
+            <div class="text-h6">{{ item.name }}</div>
+            <div class="text-subtitle1 text-deep-orange-8">
+              {{ item.price }}
+            </div>
+          </q-card-section>
+        </q-card>
+
+        <q-dialog v-model="item.modal">
+          <q-card style="min-width: 280px">
+            <q-card-section>
+              <q-img
+                :src="item.image || '/img/product_placeholder.jpg'"
+                style="
+                  height: 200px;
+                  width: 150px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+              <div class="text-h5 q-mt-md">{{ item.name }}</div>
+              <div class="text-subtitle1 text-grey-7">Descrição:</div>
+              <div class="q-mb-md">{{ item.description }}</div>
+            </q-card-section>
+
+            <q-separator />
+
+            <!-- Seleção de Sabores de Gelo -->
+            <q-card-section>
+              <div class="text-subtitle2 text-grey-8 q-mb-sm">
+                Escolha os sabores de gelo:
+              </div>
+              <div
+                v-for="(gelo, i) in item.gelosSelecionados"
+                :key="i"
+                class="row items-center justify-between q-mb-sm"
+              >
+                <div>{{ gelo.nome }}</div>
+                <div class="row items-center">
+                  <q-btn
+                    dense
+                    flat
+                    icon="remove"
+                    color="deep-orange"
+                    :disable="gelo.quantidade <= 0"
+                    @click="diminuirGelo(item, gelo)"
+                  />
+
+                  <div class="q-mx-sm">{{ gelo.quantidade }}</div>
+                  <q-btn
+                    dense
+                    flat
+                    icon="add"
+                    color="deep-orange"
+                    :disable="totalGelos(item) >= item.quantity"
+                    @click="incrementarGelo(item, gelo)"
+                  />
+                </div>
+              </div>
+            </q-card-section>
+
+            <!-- Quantidade total -->
+            <q-card-section class="flex flex-center">
+              <q-btn
+                flat
+                icon="remove"
+                color="deep-orange"
+                size="lg"
+                @click="item.quantity > 1 && item.quantity--"
+              />
+              <div class="q-mx-md text-h6">{{ item.quantity }}</div>
+              <q-btn
+                flat
+                icon="add"
+                color="deep-orange"
+                size="lg"
+                @click="item.quantity++"
+              />
+            </q-card-section>
+
+            <q-card-actions align="center">
+              <q-btn
+                label="Pedir"
+                color="deep-orange-6"
+                rounded
+                size="lg"
+                @click="pedirDrinkEspecial(item)"
+              />
+              <q-btn flat label="Cancelar" color="grey" v-close-popup />
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
+      </div>
+    </div>
+
     <!-- Seção: Copos com Red Bull -->
     <div class="text-h5 text-center q-my-md text-weight-bold text-white">
       Copos com Red Bull
@@ -25,11 +131,16 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
-                style="height: 250px"
+                style="
+                  height: 200px;
+                  width: 150px;
+                  display: block;
+                  margin: 0 auto;
+                "
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
               <div class="text-subtitle1 text-grey-7">Descrição:</div>
@@ -98,7 +209,7 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
@@ -171,11 +282,16 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
-                style="height: 250px"
+                style="
+                  height: 200px;
+                  width: 150px;
+                  display: block;
+                  margin: 0 auto;
+                "
               />
               <div class="text-h5 q-mt-md">{{ item.name }}</div>
               <div class="text-subtitle1 text-grey-7">Descrição:</div>
@@ -244,7 +360,7 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
@@ -311,6 +427,103 @@ import { ref } from "vue";
 import { useCartStore } from "src/stores/cart";
 
 const cart = useCartStore();
+
+// Función para aumentar el sabor de gelo, hasta el máximo permitido (cantidad del producto)
+function incrementarGelo(item, gelo) {
+  if (totalGelos(item) < item.quantity) {
+    gelo.quantidade++;
+  }
+}
+
+// Función para disminuir el sabor de gelo
+function diminuirGelo(item, gelo) {
+  if (gelo.quantidade > 0) {
+    gelo.quantidade--;
+  }
+}
+
+// Función para agregar al carrito
+function pedirDrinkEspecial(item) {
+  const saboresSelecionados = item.gelosSelecionados
+    .filter((g) => g.quantidade > 0)
+    .map((g) => `${g.nome} (x${g.quantidade})`);
+
+  const itemCarrinho = {
+    name: item.name,
+    price: item.price,
+    quantity: item.quantity,
+    image: item.image,
+    sabores: saboresSelecionados, // 🔽 los sabores van como arreglo separado
+  };
+
+  cart.addToCart(itemCarrinho);
+
+  // Resetar modal
+  item.modal = false;
+  item.quantity = 1;
+  item.gelosSelecionados = gelosBase.map((g) => ({ ...g }));
+}
+
+function totalGelos(item) {
+  return item.gelosSelecionados.reduce((acc, gelo) => acc + gelo.quantidade, 0);
+}
+
+const gelosBase = [
+  { nome: "Gelo de coco", quantidade: 0 },
+  { nome: "Gelo de maracujá", quantidade: 0 },
+  { nome: "Gelo de melancia", quantidade: 0 },
+  { nome: "Gelo de frutas tropicais", quantidade: 0 },
+  { nome: "Gelo de frutas vermelhas", quantidade: 0 },
+];
+
+// Copas especiais
+const especial = ref([
+  {
+    name: "Copo de Rocks de melancia + Red Bull + sabor gelo + remessa",
+    price: "R$30,00",
+    image: "/img/especial.jpeg",
+    description: "Refrescância da melancia com energia pura.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+  {
+    name: "Doses de Rocks + Red Bull + sabor gelo + remessa",
+    price: "R$29,00",
+    image: "/img/especial.jpeg",
+    description: "Clássico e direto, um gin intenso com Red Bull.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+  {
+    name: "Doses Eternity + Red Bull + sabor gelo + remessa",
+    price: "R$24,00",
+    image: "/img/especial.jpeg",
+    description: "Floral e energético, para os mais ousados.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+  {
+    name: "Doses RM's + Red Bull + sabor gelo + remessa",
+    price: "R$23,00",
+    image: "/img/especial.jpeg",
+    description: "Variado, colorido e com energia para a noite inteira.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+  {
+    name: "Doses de Tanquery + Red Bull + sabor gelo + remessa",
+    price: "R$54,00",
+    image: "/img/especial.jpeg",
+    description: "Tradicional com um toque moderno energético.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+]);
 
 // Copas com Red Bull
 const redBullCups = ref([

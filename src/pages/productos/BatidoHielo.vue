@@ -25,7 +25,7 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
@@ -92,7 +92,7 @@
         <q-card class="my-card" style="width: 300px" @click="item.modal = true">
           <q-img
             :src="item.image || '/product_placeholder.jpg'"
-            style="height: 200px; width: 170px; display: block; margin: 0 auto"
+            style="height: 200px"
           />
           <q-card-section class="text-center">
             <div class="text-h6">{{ item.name }}</div>
@@ -103,13 +103,13 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
                 style="
                   height: 200px;
-                  width: 170px;
+                  width: 150px;
                   display: block;
                   margin: 0 auto;
                 "

@@ -25,7 +25,7 @@
         </q-card>
 
         <q-dialog v-model="item.modal">
-          <q-card style="min-width: 400px">
+          <q-card style="min-width: 280px">
             <q-card-section>
               <q-img
                 :src="item.image || '/img/product_placeholder.jpg'"
