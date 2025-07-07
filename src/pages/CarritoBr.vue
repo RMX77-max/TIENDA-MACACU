@@ -133,10 +133,11 @@ const enviarPedidoPorWhatsapp = () => {
         : item.price;
     const subtotal = (preco * item.quantity).toFixed(2);
 
-    // 🔽 Verifica se o nome contém 'gelo' e separa os sabores
-    if (item.name.includes("gelo")) {
-      const [produto, sabores] = item.name.split(" + ");
-      mensagem += `• ${produto} (x${item.quantity}) - R$ ${subtotal}\n  Sabores: ${sabores}\n`;
+    // Si el producto tiene sabores (de drink especial)
+    if (item.sabores && item.sabores.length > 0) {
+      mensagem += `• ${item.name} (x${
+        item.quantity
+      }) - R$ ${subtotal}\n  Sabores: ${item.sabores.join(", ")}\n`;
     } else {
       mensagem += `• ${item.name} (x${item.quantity}) - R$ ${subtotal}\n`;
     }
@@ -144,7 +145,7 @@ const enviarPedidoPorWhatsapp = () => {
 
   mensagem += `\n📦 *Total:* R$ ${cart.totalPrice}`;
 
-  const numeroWhatsapp = "59167740809"; // DDI + DDD + número
+  const numeroWhatsapp = "5511967411626"; // Coloque seu número com DDI e DDD
   const textoCodificado = encodeURIComponent(mensagem);
   const link = `https://wa.me/${numeroWhatsapp}?text=${textoCodificado}`;
 
@@ -154,7 +155,7 @@ const enviarPedidoPorWhatsapp = () => {
 
   setTimeout(() => {
     window.scrollTo(0, 0);
-    window.location.href = "/#/InicioLicoreria";
+    window.location.href = "/#/InicioLicoreria"; // ajuste se precisar
   }, 500);
 };
 </script>

@@ -506,21 +506,21 @@ function diminuirGelo(item, gelo) {
 
 // Función para agregar al carrito
 function pedirDrinkEspecial(item) {
-  const sabores = item.gelosSelecionados
+  const saboresSelecionados = item.gelosSelecionados
     .filter((g) => g.quantidade > 0)
-    .map((g) => `${g.nome} (x${g.quantidade})`)
-    .join(", ");
+    .map((g) => `${g.nome} (x${g.quantidade})`);
 
   const itemCarrinho = {
-    name: `${item.name} + ${sabores}`,
+    name: item.name,
     price: item.price,
     quantity: item.quantity,
     image: item.image,
+    sabores: saboresSelecionados, // 🔽 los sabores van como arreglo separado
   };
 
   cart.addToCart(itemCarrinho);
 
-  // Reset
+  // Resetar modal
   item.modal = false;
   item.quantity = 1;
   item.gelosSelecionados = gelosBase.map((g) => ({ ...g }));
