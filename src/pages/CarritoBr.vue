@@ -122,22 +122,40 @@
 <script setup>
 import { useCartStore } from "src/stores/cart";
 const cart = useCartStore();
+
 const enviarPedidoPorWhatsapp = () => {
   let mensagem = "🛒 *Novo Pedido Al Capone*\n\n";
 
   cart.items.forEach((item) => {
-    mensagem += `• ${item.name} (x${item.quantity}) - R$ ${(
-      parseFloat(item.price.replace("R$", "").replace(",", ".")) * item.quantity
-    ).toFixed(2)}\n`;
+    const preco =
+      typeof item.price === "string"
+        ? parseFloat(item.price.replace("R$", "").replace(",", "."))
+        : item.price;
+    const subtotal = (preco * item.quantity).toFixed(2);
+
+    // 🔽 Verifica se o nome contém 'gelo' e separa os sabores
+    if (item.name.includes("gelo")) {
+      const [produto, sabores] = item.name.split(" + ");
+      mensagem += `• ${produto} (x${item.quantity}) - R$ ${subtotal}\n  Sabores: ${sabores}\n`;
+    } else {
+      mensagem += `• ${item.name} (x${item.quantity}) - R$ ${subtotal}\n`;
+    }
   });
 
   mensagem += `\n📦 *Total:* R$ ${cart.totalPrice}`;
 
-  const numeroWhatsapp = "5511967411626"; // Coloque aqui seu número com DDI e DDD (ex: 55 = Brasil, 11 = SP)
+  const numeroWhatsapp = "59167740809"; // DDI + DDD + número
   const textoCodificado = encodeURIComponent(mensagem);
   const link = `https://wa.me/${numeroWhatsapp}?text=${textoCodificado}`;
 
   window.open(link, "_blank");
+
+  cart.clearCart();
+
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+    window.location.href = "/#/InicioLicoreria";
+  }, 500);
 };
 </script>
 

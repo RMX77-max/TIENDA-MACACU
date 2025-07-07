@@ -55,17 +55,17 @@
                     v-close-popup
                     @click="$router.push('/Whisky')"
                   >
-                    <q-item-section>Whisky</q-item-section>
+                    <q-item-section>WHISKY</q-item-section>
                   </q-item>
                   <q-item clickable v-close-popup @click="$router.push('/gin')">
-                    <q-item-section>Gin</q-item-section>
+                    <q-item-section>GIN</q-item-section>
                   </q-item>
                   <q-item
                     clickable
                     v-close-popup
                     @click="$router.push('/cervejas')"
                   >
-                    <q-item-section>Cervejas</q-item-section>
+                    <q-item-section>CERVEJAS</q-item-section>
                   </q-item>
 
                   <q-item
@@ -73,7 +73,7 @@
                     v-close-popup
                     @click="$router.push('/licor')"
                   >
-                    <q-item-section>Licor</q-item-section>
+                    <q-item-section>LICOR</q-item-section>
                   </q-item>
 
                   <q-item
@@ -81,7 +81,7 @@
                     v-close-popup
                     @click="$router.push('/seda')"
                   >
-                    <q-item-section>Sedas</q-item-section>
+                    <q-item-section>SEDAS</q-item-section>
                   </q-item>
 
                   <q-item
@@ -89,7 +89,15 @@
                     v-close-popup
                     @click="$router.push('/batido')"
                   >
-                    <q-item-section>smoothies e Gelo</q-item-section>
+                    <q-item-section>SMOOTHIES E CAIPIRINHA</q-item-section>
+                  </q-item>
+
+                  <q-item
+                    clickable
+                    v-close-popup
+                    @click="$router.push('/batido')"
+                  >
+                    <q-item-section>GELO</q-item-section>
                   </q-item>
                 </q-list>
               </div>
@@ -187,22 +195,25 @@
         style="font-family: Arial, Helvetica, sans-serif"
       >
         <q-item clickable v-ripple @click="$router.push('Whisky')">
-          <q-item-section>Whisky</q-item-section>
+          <q-item-section>WHISKY</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="$router.push('gin')">
-          <q-item-section>Gin</q-item-section>
+          <q-item-section>GIN</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="$router.push('cervejas')">
-          <q-item-section>Cerveja</q-item-section>
+          <q-item-section>CERVEJA</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="$router.push('licor')">
-          <q-item-section>Licor</q-item-section>
+          <q-item-section>LICOR</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="$router.push('seda')">
-          <q-item-section>Sedas</q-item-section>
+          <q-item-section>SEDAS</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="$router.push('batido')">
-          <q-item-section>smoothies e Gelo</q-item-section>
+          <q-item-section>SMOOTHIES E CAIPIRINHA</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple @click="$router.push('batido')">
+          <q-item-section>GELO</q-item-section>
         </q-item>
       </q-expansion-item>
 

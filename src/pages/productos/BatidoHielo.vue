@@ -85,7 +85,7 @@
 
     <!-- Seção: CERVEJA LONG NECK  -->
     <div class="text-h5 text-center q-my-md text-weight-bold text-white">
-      GELO
+      CAIPIRINHA
     </div>
     <div class="q-gutter-md row items-stretch justify-center">
       <div v-for="(item, index) in caipirinha" :key="index">
