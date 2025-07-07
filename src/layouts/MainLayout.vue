@@ -95,7 +95,7 @@
                   <q-item
                     clickable
                     v-close-popup
-                    @click="$router.push('/batido')"
+                    @click="$router.push('/gelo')"
                   >
                     <q-item-section>GELO</q-item-section>
                   </q-item>
@@ -212,7 +212,7 @@
         <q-item clickable v-ripple @click="$router.push('batido')">
           <q-item-section>SMOOTHIES E CAIPIRINHA</q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('batido')">
+        <q-item clickable v-ripple @click="$router.push('gelo')">
           <q-item-section>GELO</q-item-section>
         </q-item>
       </q-expansion-item>

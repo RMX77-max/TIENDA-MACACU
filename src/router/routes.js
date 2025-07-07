@@ -41,6 +41,10 @@ const routes = [
         component: () => import("pages/productos/BatidoHielo.vue"),
       },
       {
+        path: "gelo",
+        component: () => import("pages/productos/HieloSabor.vue"),
+      },
+      {
         path: "carrito",
         component: () => import("pages/CarritoBr.vue"),
       },
