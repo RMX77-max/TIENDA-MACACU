@@ -34,7 +34,7 @@
                 >
                   <div class="q-mt-md text-center">
                     <img
-                      src="/img/puertaTienda.jpeg"
+                      src="/img/macacu1.jpeg"
                       :style="{
                         width: $q.screen.lt.md ? '150px' : '100%',
                         borderRadius: '12px',
@@ -45,7 +45,7 @@
                 <q-carousel-slide name="tv" class="column no-wrap flex-center">
                   <div class="q-mt-md text-center">
                     <img
-                      src="/img/InteriorTienda.jpeg"
+                      src="/img/macacu2.jpeg"
                       :style="{
                         width: $q.screen.lt.md ? '150px' : '100%',
                         borderRadius: '12px',
