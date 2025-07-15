@@ -45,6 +45,22 @@ const routes = [
         component: () => import("pages/productos/HieloSabor.vue"),
       },
       {
+        path: "energizante",
+        component: () => import("pages/productos/EnergizanteLicoreria.vue"),
+      },
+      {
+        path: "bebidasinalcohol",
+        component: () => import("pages/productos/BebidaSin.vue"),
+      },
+      {
+        path: "tabacaria",
+        component: () => import("pages/productos/TabacariaLico.vue"),
+      },
+      {
+        path: "tabaco",
+        component: () => import("pages/productos/TabacoLicoreria.vue"),
+      },
+      {
         path: "carrito",
         component: () => import("pages/CarritoBr.vue"),
       },
