@@ -608,7 +608,7 @@ const vibesCups = ref([
 const combo_vibe = ref([
   {
     name: "Combo Eternity com Vibe",
-    price: "R$55,00",
+    price: "R$60,00",
     image: "/img/vibe-eternity.png",
     description: "Um combo delicado e tropical.",
     modal: false,
@@ -635,7 +635,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Combo Eternity com Red Bull",
-    price: "R$85,00",
+    price: "R$90,00",
     image: "/img/eternity_redbull.jpg",
     description: "Elegante e vibrante, ideal para noites longas.",
     modal: false,

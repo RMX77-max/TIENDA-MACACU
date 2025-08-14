@@ -749,7 +749,7 @@ const vibesCups = ref([
 const combos_con_redbull = ref([
   {
     name: "Black Label com Red Bull",
-    price: "R$275,00",
+    price: "R$260,00",
     image: "/img/redbull_blacklabel.jpg",
     description: "Combinação de respeito para quem quer impressionar.",
     modal: false,
@@ -757,7 +757,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Buchaman's com Red Bull",
-    price: "R$270,00",
+    price: "R$260,00",
     image: "/img/redbull_buchanans.jpg",
     description: "Refinado, potente e com energia de sobra.",
     modal: false,
@@ -765,7 +765,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Old Parr com Red Bull",
-    price: "R$280,00",
+    price: "R$225,00",
     image: "/img/redbull_oldparr.jpeg",
     description: "Uma dupla perfeita para noites duradouras.",
     modal: false,
@@ -773,7 +773,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Jack Daniels com Red Bull",
-    price: "R$200,00",
+    price: "R$230,00",
     image: "/img/redbull_jackdaniels.jpg",
     description: "O sabor clássico com toda a energia do Red Bull.",
     modal: false,
@@ -781,7 +781,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Chivas com Red Bull",
-    price: "R$190,00",
+    price: "R$200,00",
     image: "/img/redbullchivas.jpeg",
     description: "Qualidade escocesa e energia vibrante.",
     modal: false,
@@ -789,7 +789,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Red Label com Red Bull",
-    price: "R$180,00",
+    price: "R$150,00",
     image: "/img/redbull_redlabel.jpeg",
     description: "O equilíbrio ideal entre custo e sabor.",
     modal: false,
@@ -797,7 +797,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Passport com Red Bull",
-    price: "R$120,00",
+    price: "R$150,00",
     image: "/img/redbull_passport.jpg",
     description: " Simples e eficaz, o combo perfeito pro rolê.",
     modal: false,
@@ -808,7 +808,7 @@ const combos_con_redbull = ref([
 const combo_vibe = ref([
   {
     name: "Vibe com Red Label",
-    price: "R$150,00",
+    price: "R$130,00",
     image: "/img/vibe_redlabel.jpg",
     description: "Whisky vibrante com um toque descontraído do Vibes.",
     modal: false,
@@ -816,7 +816,7 @@ const combo_vibe = ref([
   },
   {
     name: "Vibe com Passport",
-    price: "R$80,00",
+    price: "R$130,00",
     image: "/img/vibe_passport.jpg",
     description: "Econômico e saboroso, com a refrescância do Vibes.",
     modal: false,
@@ -824,7 +824,7 @@ const combo_vibe = ref([
   },
   {
     name: "Vibe com Chivas",
-    price: "R$160,00",
+    price: "R$150,00",
     image: "/img/vibe_chivas.jpeg",
     description: "Luxo e leveza num combo inesquecível.",
     modal: false,
