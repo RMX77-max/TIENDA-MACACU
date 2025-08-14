@@ -836,7 +836,7 @@ const combo_vibe = ref([
 const garrafas = ref([
   {
     name: "Black Label",
-    price: "R$250,00",
+    price: "R$200,00",
     image: "/img/black_label.jpeg",
     description: "Blend icônico e encorpado.",
     modal: false,
@@ -844,7 +844,7 @@ const garrafas = ref([
   },
   {
     name: "Buchanan's",
-    price: "R$189,99",
+    price: "R$200",
     image: "/img/BUCHANANS.jpg",
     description: "Elegância em cada gole.",
     modal: false,
@@ -852,7 +852,7 @@ const garrafas = ref([
   },
   {
     name: "Old Parr",
-    price: "R$159,99",
+    price: "R$155",
     image: "/img/old-parr.jpg",
     description: "Tradicional, com sabor forte e marcante.",
     modal: false,
@@ -868,7 +868,7 @@ const garrafas = ref([
   },
   {
     name: "Chivas",
-    price: "R$139,99",
+    price: "R$140,00",
     image: "/img/chivas.png",
     description: "Sofisticado e equilibrado.",
     modal: false,
@@ -876,7 +876,7 @@ const garrafas = ref([
   },
   {
     name: "Red Label",
-    price: "R$120,00",
+    price: "R$105,00",
     image: "/img/red_label.jpeg",
     description: "Versátil e acessível.",
     modal: false,
@@ -884,7 +884,7 @@ const garrafas = ref([
   },
   {
     name: "Passport",
-    price: "R$79,99",
+    price: "R$65",
     image: "/img/paspporte.jpeg",
     description: "Nacional, potente e econômico.",
     modal: false,
