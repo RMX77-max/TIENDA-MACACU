@@ -545,7 +545,7 @@ const redBullCups = ref([
   },
   {
     name: "Doses de Red Bull com Eternity",
-    price: "R$20,00",
+    price: "R$22,00",
     image: "/img/vasoconredbull.jpg",
     description: "Floral e energético, para os mais ousados.",
     modal: false,
@@ -553,7 +553,7 @@ const redBullCups = ref([
   },
   {
     name: "Doses de Red Bull com RM's",
-    price: "R$19,00",
+    price: "R$22,00",
     image: "/img/vasoconredbull.jpg",
     description: "Variado, colorido e com energia para a noite inteira.",
     modal: false,
@@ -561,7 +561,7 @@ const redBullCups = ref([
   },
   {
     name: "Doses de Red Bull com Tanquery",
-    price: "R$50,00",
+    price: "R$42,00",
     image: "/img/vasoconredbull.jpg",
     description: "Tradicional com um toque moderno energético.",
     modal: false,
@@ -589,7 +589,7 @@ const vibesCups = ref([
   },
   {
     name: "Doses de vibe com RM's",
-    price: "R$10,00",
+    price: "R$15,00",
     image: "/img/vasovibe.png",
     description: "Um mix divertido e tropical.",
     modal: false,
@@ -597,7 +597,7 @@ const vibesCups = ref([
   },
   {
     name: "Doses de vibe com Tanquery",
-    price: "R$38,00",
+    price: "R$37,00",
     image: "/img/vasovibe.png",
     description: "Elegância em forma de drink refrescante.",
     modal: false,
@@ -627,7 +627,7 @@ const combo_vibe = ref([
 const combos_con_redbull = ref([
   {
     name: "Combo Tanquery com Red Bull",
-    price: "R$250,00",
+    price: "R$190,00",
     image: "/img/tanquery-redbull.png",
     description: "Premium, com a dose certa de energia.",
     modal: false,

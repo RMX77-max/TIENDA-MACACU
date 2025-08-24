@@ -645,7 +645,7 @@ const vasoespecial = ref([
 const redBullCups = ref([
   {
     name: "Copo Red Bull com Black Label",
-    price: "R$45,00",
+    price: "R$47,00",
     image: "/img/vasoconredbull.jpg",
     description: "Um blend refinado com Red Bull, ideal para noites intensas.",
     modal: false,
@@ -653,7 +653,7 @@ const redBullCups = ref([
   },
   {
     name: "Copo Red Bull com Buchanan's",
-    price: "R$45,00",
+    price: "R$47,00",
     image: "/img/vasoconredbull.jpg",
     description: "Suavidade e elegância com a energia do Red Bull.",
     modal: false,
@@ -670,7 +670,7 @@ const redBullCups = ref([
   },
   {
     name: "Copo Red Bull com Jack Daniels",
-    price: "R$40,00",
+    price: "R$45,00",
     image: "/img/vasoconredbull.jpg",
     description: "O clássico americano com um toque energético.",
     modal: false,
@@ -678,7 +678,7 @@ const redBullCups = ref([
   },
   {
     name: "Copo Red Bull com Jack Daniels de Mel",
-    price: "R$50,00",
+    price: "R$45,00",
     image: "/img/vasoconredbull.jpg",
     description: "Adoçado com mel e elevado com Red Bull.",
     modal: false,
@@ -686,7 +686,7 @@ const redBullCups = ref([
   },
   {
     name: "Copo Red Bull com Chivas",
-    price: "R$35,00",
+    price: "R$38,00",
     image: "/img/vasoconredbull.jpg",
     description: "Whisky escocês premium com uma explosão energética.",
     modal: false,
@@ -702,7 +702,7 @@ const redBullCups = ref([
   },
   {
     name: "Copo Red Bull com Passport",
-    price: "R$27,00",
+    price: "R$25,00",
     image: "/img/vasoconredbull.jpg",
     description: "Nacional, forte e energético, ideal para começar a festa.",
     modal: false,
@@ -781,7 +781,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Chivas com Red Bull",
-    price: "R$200,00",
+    price: "R$150,00",
     image: "/img/redbullchivas.jpeg",
     description: "Qualidade escocesa e energia vibrante.",
     modal: false,
