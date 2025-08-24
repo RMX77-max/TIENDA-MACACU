@@ -105,7 +105,7 @@ const gelo = ref([
   },
   {
     name: "Tabaco Natural Amsterdam 25g",
-    price: "R$20,00",
+    price: "R$15,00",
     image: "/img/tabaco/2.jpeg",
     description: "",
     modal: false,
