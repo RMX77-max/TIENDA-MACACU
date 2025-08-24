@@ -97,7 +97,7 @@ const cart = useCartStore();
 const gelo = ref([
   {
     name: "1 pacote de gelo de coco ",
-    price: "R$4,00",
+    price: "R$3,00",
     image: "/img/coco.png",
     description:
       "Refrescante e suave, esse gelo traz o sabor tropical do coco para dar um toque especial a qualquer bebida. Ideal para drinks com whisky, rum ou batidas cremosas.",
@@ -106,7 +106,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de maracujá",
-    price: "R$4,00",
+    price: "R$3,00",
     image: "/img/maracuya.jpeg",
     description:
       "Levemente ácido e exótico, o gelo de maracujá transforma seu drink com um toque frutado e marcante. Perfeito para equilibrar sabores doces e intensos.",
@@ -115,7 +115,7 @@ const gelo = ref([
   },
   {
     name: "1 pacote de gelo de melancia",
-    price: "R$4,00",
+    price: "R$3,00",
     image: "/img/sandia.png",
     description:
       "Doce, refrescante e vibrante, esse gelo é a cara do verão! Combina muito bem com bebidas claras e cítricas, deixando tudo mais leve e gostoso.",

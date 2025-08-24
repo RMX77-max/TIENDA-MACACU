@@ -781,7 +781,7 @@ const combos_con_redbull = ref([
   },
   {
     name: "Chivas com Red Bull",
-    price: "R$150,00",
+    price: "R$200,00",
     image: "/img/redbullchivas.jpeg",
     description: "Qualidade escocesa e energia vibrante.",
     modal: false,

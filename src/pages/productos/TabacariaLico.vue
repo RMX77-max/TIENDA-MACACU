@@ -177,7 +177,7 @@ const gelo = ref([
   },
   {
     name: "Tesoura dobrável cabo de metal Prata",
-    price: "R$12,00",
+    price: "R$15,00",
     image: "/img/tabacaria/11.jpeg",
     description: "",
     modal: false,
@@ -185,7 +185,7 @@ const gelo = ref([
   },
   {
     name: "Tesoura dobrável cabo de metal Dourada",
-    price: "R$12,00",
+    price: "R$15,00",
     image: "/img/tabacaria/12.jpeg",
     description: "",
     modal: false,

@@ -187,7 +187,7 @@ const gelo = ref([
   },
   {
     name: "Vibe 2l",
-    price: "R$18,00",
+    price: "R$17,00",
     image: "/img/vibe.jpeg",
     description:
       "Pra animar qualquer rolê! A Vibe 2L é a bebida energética que junta sabor marcante, alta concentração de cafeína e aquele gás pra te manter no ritmo a noite toda.",

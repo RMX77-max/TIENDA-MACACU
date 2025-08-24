@@ -252,7 +252,7 @@
         <q-item clickable v-ripple @click="$router.push('tabacaria')">
           <q-item-section>TABACARIA</q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('tabacaria')">
+        <q-item clickable v-ripple @click="$router.push('tabaco')">
           <q-item-section>TABACO</q-item-section>
         </q-item>
       </q-expansion-item>
