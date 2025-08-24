@@ -552,6 +552,14 @@ const redBullCups = ref([
     quantity: 1,
   },
   {
+    name: "Doses de Red Bull/Sabor com Eternity",
+    price: "R$23,00",
+    image: "/img/vasoconredbull.jpg",
+    description: "Floral e energético com sabor, para os mais ousados.",
+    modal: false,
+    quantity: 1,
+  },
+  {
     name: "Doses de Red Bull com RM's",
     price: "R$22,00",
     image: "/img/vasoconredbull.jpg",
