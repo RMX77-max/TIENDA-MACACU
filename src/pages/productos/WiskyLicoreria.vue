@@ -562,7 +562,7 @@ const gelosBase = [
 const vasoespecial = ref([
   {
     name: "Copo Black Label + Red Bull + sabor gelo + remessa",
-    price: "R$49,00",
+    price: "R$51,00",
     image: "/img/especial.jpeg",
     description: "Sabor marcante do Black Label...",
     modal: false,
@@ -571,7 +571,7 @@ const vasoespecial = ref([
   },
   {
     name: "Copo Buchanan's + Red Bull + sabor gelo + remessa",
-    price: "R$49,00",
+    price: "R$51,00",
     image: "/img/especial.jpeg",
     description:
       "A sofisticação do Buchanan’s com gelo de frutas e Red Bull. Uma mistura elegante e marcante que refresca e surpreende.",
@@ -591,7 +591,7 @@ const vasoespecial = ref([
   },
   {
     name: "Copo Jack Daniels + Red Bull + sabor gelo + remessa",
-    price: "R$44,00",
+    price: "R$49,00",
     image: "/img/especial.jpeg",
     description:
       "O sabor inconfundível de Jack Daniels com gelo aromático e energia de Red Bull. Um drink ousado para momentos especiais.",
@@ -601,7 +601,7 @@ const vasoespecial = ref([
   },
   {
     name: "Copo Jack Daniels de Mel + Red Bull + sabor gelo + remessa",
-    price: "R$54,00",
+    price: "R$49,00",
     image: "/img/especial.jpeg",
     description:
       "A doçura natural do Jack Honey se mistura ao gelo saborizado e Red Bull, criando um drink equilibrado e irresistível.",
@@ -611,7 +611,7 @@ const vasoespecial = ref([
   },
   {
     name: "Copo Chivas + Red Bull + sabor gelo + remessa",
-    price: "R$39,00",
+    price: "R$42,00",
     image: "/img/especial.jpeg",
     description:
       "Chivas Regal com gelo de frutas e Red Bull: um clássico escocês com uma pegada tropical e vibrante. Refinado e refrescante.",
@@ -631,7 +631,7 @@ const vasoespecial = ref([
   },
   {
     name: "Copo Passport + Red Bull + sabor gelo + remessa",
-    price: "R$31,00",
+    price: "R$29,00",
     image: "/img/especial.jpeg",
     description:
       "O Passporte traz leveza e suavidade ao seu drink, com o toque refrescante do gelo de sabor e a vibração do Red Bull. Preço especial, experiência única.",
@@ -730,7 +730,7 @@ const vibesCups = ref([
   },
   {
     name: "Vibe com Chivas",
-    price: "R$30,00",
+    price: "R$38,00",
     image: "/img/vasovibe.png",
     description: "Elegância escocesa suavizada com o sabor tropical do Vibes.",
     modal: false,
@@ -738,7 +738,7 @@ const vibesCups = ref([
   },
   {
     name: "Vibe com Old Parr",
-    price: "R$15,00",
+    price: "R$30,00",
     image: "/img/vasovibe.png",
     description: "Robusto e refrescante com notas leves do Vibes.",
     modal: false,

@@ -497,8 +497,17 @@ const especial = ref([
     gelosSelecionados: gelosBase.map((g) => ({ ...g })),
   },
   {
-    name: "Doses Eternity + Red Bull + sabor gelo + remessa",
-    price: "R$24,00",
+    name: "Doses Eternity + Tradicional Red Bull + sabor gelo + remessa",
+    price: "R$22,00",
+    image: "/img/especial.jpeg",
+    description: "Floral e energético, para os mais ousados.",
+    modal: false,
+    quantity: 1,
+    gelosSelecionados: gelosBase.map((g) => ({ ...g })),
+  },
+  {
+    name: "Doses Eternity + Sabor Red Bull + sabor gelo + remessa",
+    price: "R$23,00",
     image: "/img/especial.jpeg",
     description: "Floral e energético, para os mais ousados.",
     modal: false,
@@ -516,7 +525,7 @@ const especial = ref([
   },
   {
     name: "Doses de Tanquery + Red Bull + sabor gelo + remessa",
-    price: "R$54,00",
+    price: "R$46,00",
     image: "/img/especial.jpeg",
     description: "Tradicional com um toque moderno energético.",
     modal: false,
@@ -597,7 +606,7 @@ const vibesCups = ref([
   },
   {
     name: "Doses de vibe com RM's",
-    price: "R$15,00",
+    price: "R$13,00",
     image: "/img/vasovibe.png",
     description: "Um mix divertido e tropical.",
     modal: false,

@@ -196,7 +196,7 @@ const gelo = ref([
   },
   {
     name: "coca lata 350ml zero",
-    price: "R$4,50",
+    price: "R$6,50",
     image: "/img/cocalata_zero.jpeg",
     description:
       "Todo o sabor da Coca-Cola com zero açúcar. Refrescante, equilibrada e perfeita para quem quer manter o controle.",

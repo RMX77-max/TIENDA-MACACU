@@ -97,7 +97,7 @@ const cart = useCartStore();
 const seda = ref([
   {
     name: "Seda Papelito",
-    price: "R$7,00",
+    price: "R$6,50",
     image: "/img/papelito.jpg",
     description: "Tradicional, ideal para o dia a dia.",
     modal: false,
@@ -113,7 +113,7 @@ const seda = ref([
   },
   {
     name: "Seda zomo natural",
-    price: "R$5,00",
+    price: "R$5,50",
     image: "/img/natural.png",
     description: "Papel ecológico e suave.",
     modal: false,
